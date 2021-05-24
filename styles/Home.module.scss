@@ -1,0 +1,62 @@
+@use 'colors';
+
+@keyframes slidein {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: block;
+  font-size: 7rem;
+  font-weight: 700;
+  position: relative;
+  color: colors.$light;
+  text-decoration: none;
+  margin-bottom: 3rem;
+  height: 7rem;
+  overflow: hidden;
+  width: 30vw;
+
+  &__initial {
+    display: block;
+    position: absolute;
+    transform: translateY(100%);
+    animation: slidein 1s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+    &Mid {
+      animation-delay: 2s;
+    }
+    &Bottom {
+      animation-delay: 3s;
+    }
+  }
+  &:hover &__initial {
+    opacity: 0;
+  }
+
+  &__location {
+    opacity: 0;
+    transition: left 0.3s ease;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &:hover &__location {
+    opacity: 1;
+    left: 5rem;
+    color: colors.$lightHover;
+  }
+}
