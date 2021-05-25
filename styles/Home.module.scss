@@ -25,25 +25,19 @@
   margin-bottom: 3rem;
   height: 7rem;
   overflow: hidden;
-  width: 30vw;
+  width: 80vw;
 
-  &__initial {
-    display: block;
-    position: absolute;
+  &__container {
+    height: 100%;
     transform: translateY(100%);
     animation: slidein 1s ease;
     animation-fill-mode: forwards;
     animation-delay: 1s;
-
-    &Mid {
-      animation-delay: 2s;
-    }
-    &Bottom {
-      animation-delay: 3s;
-    }
   }
-  &:hover &__initial {
-    opacity: 0;
+
+  &__initial {
+    display: block;
+    position: absolute;
   }
 
   &__location {
@@ -54,9 +48,20 @@
     cursor: pointer;
   }
 
-  &:hover &__location {
+  &__container:hover &__initial {
+    visibility: hidden;
+  }
+
+  &__container:hover &__location {
     opacity: 1;
     left: 5rem;
     color: colors.$lightHover;
   }
+}
+
+.delay02 {
+  animation-delay: 2s;
+}
+.delay03 {
+  animation-delay: 3s;
 }
