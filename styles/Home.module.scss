@@ -10,13 +10,13 @@
   }
 }
 
-.main {
+.container {
   display: flex;
   flex-direction: column;
 }
 
 .link {
-  display: block;
+  display: inline-block;
   font-size: 7rem;
   font-weight: 700;
   position: relative;
@@ -25,19 +25,19 @@
   margin-bottom: 3rem;
   height: 7rem;
   overflow: hidden;
-  width: 80vw;
+  cursor: default;
+
+  & h1 {
+    display: inline-block;
+  }
 
   &__container {
+    display: inline-block;
     height: 100%;
     transform: translateY(100%);
     animation: slidein 1s ease;
     animation-fill-mode: forwards;
     animation-delay: 1s;
-  }
-
-  &__initial {
-    display: block;
-    position: absolute;
   }
 
   &__location {

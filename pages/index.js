@@ -4,44 +4,40 @@ import { useState } from 'react';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
-  const [showLinks, setshowLinks] = useState(false);
-
-  const handleHover = () => console.log('hoverring');
-  // const handleHover = () => setshowLinks(!showLinks);
   return (
-    <div className='container'>
+    <>
       <Head>
         <title>Willbuilt.co.uk</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className='main'>
-        <Link href='/about'>
-          <a className={styles.link}>
-            <div className={styles.link__container}>
-              <span className={styles.link__initial} onMouseEnter={handleHover}>
-                Hi.
-              </span>
-              <span className={styles.link__location}>About</span>
-            </div>
-          </a>
-        </Link>
-        <Link href='/about'>
-          <a className={styles.link}>
-            <div className={`${styles.link__container} ${styles.delay02}`}>
-              <span className={styles.link__initial}>I am</span>
-              <span className={styles.link__location}>Work</span>
-            </div>
-          </a>
-        </Link>
-        <Link href='/about'>
-          <a className={styles.link}>
-            <div className={`${styles.link__container} ${styles.delay03}`}>
-              <span className={`${styles.link__initial} `}>Will</span>
-              <span className={styles.link__location}>Contact</span>
-            </div>
-          </a>
-        </Link>
+        <div className={styles.container}>
+          <Link href='/about'>
+            <a className={styles.link}>
+              <div className={styles.link__container}>
+                <h1 className={styles.link__initial}>Hi.</h1>
+                <h1 className={styles.link__location}>About</h1>
+              </div>
+            </a>
+          </Link>
+          <Link href='/about'>
+            <a className={styles.link}>
+              <div className={`${styles.link__container} ${styles.delay02}`}>
+                <h1 className={styles.link__initial}>I am</h1>
+                <h1 className={styles.link__location}>Work</h1>
+              </div>
+            </a>
+          </Link>
+          <Link href='/about'>
+            <a className={styles.link}>
+              <div className={`${styles.link__container} ${styles.delay03}`}>
+                <h1 className={`${styles.link__initial} `}>Will</h1>
+                <h1 className={styles.link__location}>Contact</h1>
+              </div>
+            </a>
+          </Link>
+        </div>
       </main>
 
       {/* <footer className='footer'>
@@ -55,6 +51,6 @@ export default function Home() {
         </a>
         &nbsp;&nbsp;Made by&nbsp;<strong>Will</strong>&nbsp;📐🤓 📏
       </footer> */}
-    </div>
+    </>
   );
 }
