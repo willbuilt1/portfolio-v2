@@ -7,10 +7,10 @@ export default function Layout({ children }) {
   return (
     <div>
       <Head>
-        <meta name="description" content="Will Foster portfolio" />
-        <meta name="og:title" content={siteTitle} />
+        <meta name='description' content='Will Foster portfolio' />
+        <meta name='og:title' content={siteTitle} />
       </Head>
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <Link href="/">
@@ -27,9 +27,9 @@ export default function Layout({ children }) {
               <a>Work</a>
             </Link>
           </li>
-          <main>{children}</main>
-        </ul>
-      </nav>
+          </ul>
+        </nav> */}
+      <main>{children}</main>
     </div>
   );
 }

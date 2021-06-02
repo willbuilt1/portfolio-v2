@@ -1,4 +1,4 @@
-@use 'colors';
+@use 'vars';
 
 @keyframes slidein {
   from {
@@ -20,7 +20,7 @@
   font-size: 7rem;
   font-weight: 700;
   position: relative;
-  color: colors.$light;
+  color: vars.$light;
   text-decoration: none;
   margin-bottom: 3rem;
   height: 7rem;
@@ -55,7 +55,7 @@
   &__container:hover &__location {
     opacity: 1;
     left: 5rem;
-    color: colors.$lightHover;
+    color: vars.$bright;
   }
 }
 

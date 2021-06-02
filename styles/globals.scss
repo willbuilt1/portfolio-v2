@@ -1,3 +1,5 @@
+@use 'vars';
+
 :root {
   font-size: 62.5%;
 }
@@ -20,10 +22,49 @@ body {
 }
 
 main {
-  margin-top: 20vh;
-  margin-left: 5rem;
+  margin-top: 5vh;
+  margin-left: vars.$marginBig;
 }
 
 h1 {
   font-size: 8rem;
+}
+
+.grey {
+  color: vars.$grey;
+}
+.bright {
+  color: vars.$bright;
+}
+
+.title {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 80vw;
+    height: 1px;
+    background-color: vars.$bright;
+    position: absolute;
+    bottom: 0;
+    left: -#{vars.$marginBig};
+  }
+}
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+section {
+  margin-left: 4rem;
+  margin-top: 2rem;
+  width: 80vw;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 2rem;
+  }
 }
