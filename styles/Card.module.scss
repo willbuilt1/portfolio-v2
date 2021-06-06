@@ -1,0 +1,32 @@
+@use 'vars';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px vars.$light;
+  border-radius: 5px;
+
+  &__body {
+    padding: 2rem;
+  }
+
+  &__top {
+    position: relative;
+
+    &Text {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+    }
+  }
+
+  &__image {
+    filter: blur(3px) grayscale(100%);
+    transition: all 0.3s ease;
+  }
+
+  &:hover &__image {
+    scale: 1.1;
+    filter: blur(1px) grayscale(80%);
+  }
+}

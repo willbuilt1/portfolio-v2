@@ -11,6 +11,8 @@ body {
   font-family: sans-serif;
   background-color: rgb(21, 21, 21);
   color: seashell;
+  font-size: 2rem;
+  line-height: 1.5;
 }
 
 *,
@@ -49,10 +51,6 @@ h1 {
     bottom: 0;
     left: -#{vars.$marginBig};
   }
-}
-p {
-  font-size: 1.5rem;
-  line-height: 1.5;
 }
 
 section {
