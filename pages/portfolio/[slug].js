@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Layout, { siteTitle } from '../../components/layout';
@@ -29,7 +30,16 @@ export default function WorkItem({ workItem }) {
         <title>{siteTitle}</title>
       </Head>
       <h1 className='title'>{workItem.title}</h1>
-      <section></section>
+      <section>
+        <Image
+          src={workItem.image}
+          layout='responsive'
+          height='1080'
+          width='1920'
+          objectFit='cover'
+        ></Image>
+        <div dangerouslySetInnerHTML={workItem.description}></div>
+      </section>
     </Layout>
   );
 }

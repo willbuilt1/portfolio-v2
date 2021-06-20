@@ -1,4 +1,4 @@
-@use 'vars';
+@use '../vars';
 
 @keyframes slidein {
   from {
@@ -22,8 +22,7 @@
   position: relative;
   color: vars.$light;
   text-decoration: none;
-  margin-bottom: 3rem;
-  height: 7rem;
+  height: 8rem;
   overflow: hidden;
   cursor: default;
 
@@ -35,9 +34,18 @@
     display: inline-block;
     height: 100%;
     transform: translateY(100%);
-    animation: slidein 1s ease;
+    animation: slidein 0.5s ease;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
+
+    & h1 {
+      font-size: 7rem;
+    }
+  }
+
+  &__initial {
+    // position: absolute;
+    // min-width: 20rem;
   }
 
   &__location {
@@ -60,8 +68,8 @@
 }
 
 .delay02 {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .delay03 {
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
