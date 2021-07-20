@@ -1,19 +1,19 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
-import styles from '../styles/Home.module.scss';
+import styles from '../styles/components/Home.module.scss';
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Willbuilt.co.uk</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className="main">
+      <main className='main'>
         <div className={styles.container}>
-          <Link href="/about">
+          <Link href='/about'>
             <a className={styles.link}>
               <div className={styles.link__container}>
                 <h1 className={styles.link__initial}>Hi.</h1>
@@ -21,7 +21,7 @@ export default function Home() {
               </div>
             </a>
           </Link>
-          <Link href="/work">
+          <Link href='/work'>
             <a className={styles.link}>
               <div className={`${styles.link__container} ${styles.delay02}`}>
                 <h1 className={styles.link__initial}>I am</h1>
@@ -29,7 +29,7 @@ export default function Home() {
               </div>
             </a>
           </Link>
-          <Link href="/contact">
+          <Link href='/contact'>
             <a className={styles.link}>
               <div className={`${styles.link__container} ${styles.delay03}`}>
                 <h1 className={`${styles.link__initial} `}>Will</h1>

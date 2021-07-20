@@ -1,4 +1,4 @@
-@use 'vars';
+@use '../vars';
 
 .card {
   display: flex;
@@ -8,6 +8,9 @@
 
   &__body {
     padding: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__top {
