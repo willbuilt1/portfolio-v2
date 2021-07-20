@@ -8,7 +8,7 @@ const Card = ({ work }) => {
   return (
     <div
       className={styles.card}
-      onClick={() => router.push(`/portfolio/${work.slug}`)}
+      onClick={() => router.push(`/work/${work.slug}`)}
     >
       <div className={styles.card__top}>
         <Image
