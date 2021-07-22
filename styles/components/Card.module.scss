@@ -6,6 +6,10 @@
   border: solid 2px vars.$light;
   border-radius: 5px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &__body {
     padding: 2rem;
     white-space: nowrap;

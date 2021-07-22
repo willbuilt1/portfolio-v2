@@ -11,7 +11,7 @@ body {
   font-family: sans-serif;
   background-color: rgb(21, 21, 21);
   color: seashell;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   line-height: 1.5;
 }
 
@@ -26,11 +26,16 @@ body {
 main {
   margin-top: 5vh;
   margin-left: vars.$marginBig;
+
+  &.subpages {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 h1 {
-  // font-size: 8rem;
-  font-size: clamp(6rem, 7vw, 8rem);
+  font-size: 8.5rem;
+  text-transform: uppercase;
 }
 
 .grey {
@@ -57,7 +62,7 @@ h1 {
 section {
   margin-left: 4rem;
   margin-top: 4rem;
-  width: 80vw;
+  width: 70vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -65,5 +70,44 @@ section {
     width: 100%;
     margin-left: 0;
     padding-right: 2rem;
+    height: 80vh;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 12vw;
+  padding: 4rem 0;
+  overflow: hidden;
+
+  & a {
+    text-decoration: none;
+    color: vars.$darkGrey;
+    text-transform: uppercase;
+    font-size: 7rem;
+    line-height: 8rem;
+    font-weight: 900;
+    min-height: 35rem;
+    writing-mode: vertical-lr;
+    text-align: right;
+    rotate: (180deg);
+    transition: vars.$transition;
+    display: block;
+    transform: scale(1);
+    margin-right: -1rem;
+
+    &:hover,
+    &.active {
+      color: vars.$grey;
+      // transform: scale(1.25);
+      font-size: 8.5rem;
+    }
   }
 }

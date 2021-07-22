@@ -1,13 +1,10 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 
 export default function About() {
   return (
     <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <h1 className='grey title'>About</h1>
+      <h1 className="title">About</h1>
       <section>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ut
