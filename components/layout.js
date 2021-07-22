@@ -6,7 +6,6 @@ export const siteTitle = 'Willbuilt.co.uk - Well built websites';
 
 export default function Layout({ children, href }) {
   const router = useRouter();
-  console.log(router);
   return (
     <div>
       <Head>
