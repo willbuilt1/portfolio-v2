@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { getData } from '../../utils/helpers';
 import Link from 'next/link';
-import Layout, { siteTitle } from '../../components/layout';
+import Layout from '../../components/layout';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 export async function getStaticPaths() {
@@ -60,9 +60,6 @@ export default function WorkItem({ page }) {
   console.log(page);
   return (
     <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
       <h1 className="title">{page.siteName}</h1>
       <section>
         <Image

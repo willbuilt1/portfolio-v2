@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 export const siteTitle = 'Willbuilt.co.uk - Well built websites';
 
@@ -15,8 +16,12 @@ export default function Layout({ children, href }) {
       </Head>
 
       <main className="subpages">
-        <div>{children}</div>
-        <nav>
+        <div className="mainContent">{children}</div>
+        <motion.nav
+          initial={{ x: 100 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <Link href="/about">
             <a className={router.pathname == '/about' ? 'active' : ''}>About</a>
           </Link>
@@ -28,7 +33,7 @@ export default function Layout({ children, href }) {
               contact
             </a>
           </Link>
-        </nav>
+        </motion.nav>
       </main>
     </div>
   );

@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-color: rgb(21, 21, 21);
+  background-color: vars.$black;
   color: seashell;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -65,19 +65,6 @@ section {
   width: 70vw;
 }
 
-@media only screen and (max-width: 600px) {
-  section {
-    width: 100%;
-    margin-left: 0;
-    padding-right: 2rem;
-    height: 80vh;
-  }
-
-  main {
-    flex-direction: column;
-  }
-}
-
 nav {
   display: flex;
   flex-direction: column;
@@ -94,12 +81,11 @@ nav {
     font-size: 7rem;
     line-height: 8rem;
     font-weight: 900;
-    min-height: 35rem;
+    min-height: 33rem;
     writing-mode: vertical-lr;
     text-align: right;
     rotate: (180deg);
     transition: vars.$transition;
-    display: block;
     transform: scale(1);
     margin-right: -1rem;
 
@@ -112,11 +98,49 @@ nav {
   }
 }
 
-.transition-fade {
-  transition: 0.4s;
-  opacity: 1;
-}
+@media only screen and (max-width: 600px) {
+  section {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 2rem;
+    overflow: scroll;
+    // height: 80vh;
+  }
 
-html.is-animating .transition-fade {
-  opacity: 0;
+  main.subpages {
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-bottom: 10rem;
+    // height: 100vh;
+  }
+
+  .mainContent {
+    overflow: scroll;
+  }
+
+  nav {
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    padding: 2rem;
+    height: 10rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #1515153c, vars.$black 30%);
+
+    & a {
+      writing-mode: initial;
+      rotate: (0deg);
+      font-size: 5vw;
+      line-height: 6rem;
+      min-height: initial;
+      margin-right: 2rem;
+
+      &:hover,
+      &.active {
+        font-size: 6vw;
+      }
+    }
+  }
 }
