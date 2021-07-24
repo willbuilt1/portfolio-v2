@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 export default function Work() {
   return (
     <Layout>
-      <h1>Work</h1>
+      <h1 className="title">Say Hello 👋🏽</h1>
     </Layout>
   );
 }

@@ -1,5 +1,5 @@
 @use 'vars';
-
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&display=swap');
 :root {
   font-size: 62.5%;
 }
@@ -8,10 +8,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Exo 2', sans-serif;
   background-color: vars.$black;
   color: seashell;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.5;
 }
 
@@ -25,7 +25,7 @@ body {
 
 main {
   margin-top: 5vh;
-  margin-left: vars.$marginBig;
+  margin-left: vars.$lg;
 
   &.subpages {
     display: flex;
@@ -34,10 +34,30 @@ main {
 }
 
 h1 {
-  font-size: 8.5rem;
+  font-size: 7rem;
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  margin: vars.$sm 0;
+  text-align: justify;
+}
+
+a {
+  color: vars.$bright;
+}
+
+ul {
+  padding-left: vars.$lg;
+}
 .grey {
   color: vars.$grey;
 }
@@ -51,11 +71,11 @@ h1 {
   &::after {
     content: '';
     width: 80vw;
-    height: 1px;
+    height: 4px;
     background-color: vars.$bright;
     position: absolute;
     bottom: 0;
-    left: -#{vars.$marginBig};
+    left: -#{vars.$lg};
   }
 }
 
@@ -68,7 +88,7 @@ section {
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
   width: 12vw;
   padding: 4rem 0;
@@ -115,12 +135,13 @@ nav {
   }
 
   .mainContent {
-    overflow: scroll;
+    // overflow: scroll;
   }
 
   nav {
     flex-direction: row;
     align-items: flex-end;
+    justify-content: space-between;
     width: 100%;
     padding: 2rem;
     height: 10rem;

@@ -1,0 +1,9 @@
+@use '../vars';
+
+.cat {
+  background-color: vars.$light;
+  padding: vars.$xs vars.$sm;
+  border-radius: vars.$sm;
+  color: vars.$black;
+  // display: inline-block;
+}

@@ -1,0 +1,15 @@
+@use '../vars';
+
+.cats {
+  display: flex;
+  padding: vars.$md 0;
+
+  & > div {
+    margin-right: vars.$sm;
+  }
+}
+
+.image {
+  border: solid 2px vars.$light;
+  border-radius: 5px;
+}

@@ -11,6 +11,11 @@ export async function getStaticProps() {
       portfolioCollection {
         items {
           siteName
+          order
+          shortDesc {
+            json
+          }
+          cat
           desc {
             json
           }
@@ -18,18 +23,23 @@ export async function getStaticProps() {
           thumbnail {
             url
           }
+          codeUrl
+          demoUrl
         }
       }
     }
   `;
   const portfolio = await getData(query);
+  const sortedPortfolio = portfolio.portfolioCollection.items;
+  sortedPortfolio.sort((a, b) => a.order - b.order);
   return {
     props: {
-      portfolio: portfolio.portfolioCollection.items,
+      portfolio: sortedPortfolio,
     },
   };
 }
 export default function Work({ work, portfolio }) {
+  // console.log(portfolio);
   return (
     <Layout>
       <h1 className="title">Work</h1>

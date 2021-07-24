@@ -36,4 +36,17 @@
     scale: 1.1;
     filter: blur(1px) grayscale(80%);
   }
+
+  &__bottom {
+    padding: vars.$md;
+  }
+
+  &__cats {
+    display: flex;
+    padding: vars.$sm 0;
+
+    & > div {
+      margin-right: vars.$sm;
+    }
+  }
 }

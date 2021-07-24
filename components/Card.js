@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/components/Card.module.scss';
+import Category from './Cats';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const Card = ({ portfolio }) => {
@@ -21,11 +22,14 @@ const Card = ({ portfolio }) => {
           ></Image>
           <h2 className={styles.card__topText}>{portfolio.siteName}</h2>
         </div>
-        {/* <div
-          className={styles.card__body}
-          dangerouslySetInnerHTML={work.description}
-        ></div> */}
-        <div>{documentToReactComponents(portfolio.desc.json)}</div>
+        <div className={styles.card__bottom}>
+          <div>{documentToReactComponents(portfolio.shortDesc.json)}</div>
+          <div className={styles.card__cats}>
+            {portfolio.cat.map((category, index) => (
+              <Category key={index} cat={category}></Category>
+            ))}
+          </div>
+        </div>
       </div>
     </Link>
   );
