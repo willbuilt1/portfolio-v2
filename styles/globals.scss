@@ -114,6 +114,7 @@ nav {
       color: vars.$grey;
       // transform: scale(1.25);
       font-size: 8.5rem;
+      margin-right: -0.5rem;
     }
   }
 }
@@ -132,6 +133,10 @@ nav {
     margin-left: 2rem;
     margin-bottom: 10rem;
     // height: 100vh;
+  }
+
+  .title::after {
+    width: 95vw;
   }
 
   .mainContent {

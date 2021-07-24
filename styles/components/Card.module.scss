@@ -43,9 +43,10 @@
 
   &__cats {
     display: flex;
-    padding: vars.$sm 0;
+    margin-bottom: vars.$sm;
 
     & > div {
+      margin-top: vars.$sm;
       margin-right: vars.$sm;
     }
   }

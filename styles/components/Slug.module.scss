@@ -2,9 +2,11 @@
 
 .cats {
   display: flex;
-  padding: vars.$md 0;
+  flex-wrap: wrap;
+  margin-bottom: vars.$md;
 
   & > div {
+    margin-top: vars.$md;
     margin-right: vars.$sm;
   }
 }
