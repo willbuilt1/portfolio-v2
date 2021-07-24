@@ -144,6 +144,26 @@ footer {
   }
 }
 
+@media only screen and (min-width: 1600px) {
+  .mainContent {
+    width: 100%;
+  }
+  section {
+    width: 60%;
+    margin: 8rem auto 4rem;
+    padding-right: 5rem;
+    overflow: scroll;
+    // height: 80vh;
+  }
+
+  // main.subpages {
+  //   flex-direction: column;
+  //   margin-left: 2rem;
+  //   margin-bottom: 10rem;
+  //   // height: 100vh;
+  // }
+}
+
 @media only screen and (max-width: 600px) {
   section {
     width: 100%;
