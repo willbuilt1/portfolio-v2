@@ -44,6 +44,9 @@ export default function Work({ work, portfolio }) {
     <Layout>
       <h1 className="title">Work</h1>
       <section>
+        <p>
+          Below are some examples of some things that I have been dabbling in.
+        </p>
         <div className={styles.container}>
           {portfolio.map((item, index) => (
             <Card key={index} portfolio={item} />

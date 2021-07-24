@@ -26,6 +26,7 @@ body {
 main {
   margin-top: 5vh;
   margin-left: vars.$lg;
+  margin-bottom: 10rem;
 
   &.subpages {
     display: flex;
@@ -93,6 +94,7 @@ nav {
   width: 12vw;
   padding: 4rem 0;
   overflow: hidden;
+  position: relative;
 
   & a {
     text-decoration: none;
@@ -119,11 +121,34 @@ nav {
   }
 }
 
+footer {
+  height: 10rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.homeLink {
+  color: vars.$darkGrey;
+  height: 10rem;
+  padding-top: 3rem;
+  width: 7rem;
+  margin-right: -5px;
+  background: linear-gradient(to bottom, #1515153c, vars.$black 25%);
+
+  &:hover {
+    color: vars.$grey;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   section {
     width: 100%;
     margin-left: 0;
-    padding-right: 2rem;
+    padding-right: 5rem;
     overflow: scroll;
     // height: 80vh;
   }
@@ -153,7 +178,7 @@ nav {
     position: fixed;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to bottom, #1515153c, vars.$black 30%);
+    background: linear-gradient(to bottom, #15151500, vars.$black 30%);
 
     & a {
       writing-mode: initial;
@@ -168,5 +193,23 @@ nav {
         font-size: 6vw;
       }
     }
+  }
+
+  footer {
+    height: 7rem;
+    background: linear-gradient(to top, #15151500, vars.$black 40%);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .homeLink {
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+    padding: 0;
   }
 }
