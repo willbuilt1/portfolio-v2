@@ -57,11 +57,13 @@
     cursor: pointer;
   }
 
-  &__container:hover &__initial {
+  &__container:hover &__initial,
+  &__container:hover &__initial.showLink {
     visibility: hidden;
   }
 
-  &__container:hover &__location {
+  &__container:hover &__location,
+  &__container:hover &__location.showLink {
     opacity: 1;
     left: 5rem;
     color: vars.$bright;

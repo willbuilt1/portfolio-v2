@@ -2,8 +2,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from '../styles/components/Home.module.scss';
+import { isMobile } from 'react-device-detect';
 
 export default function Home() {
+  const [showLinks, setshowLinks] = useState(false);
+  const displayLinks = () => {
+    isMobile ? console.log('mobile') : console.log('desktop');
+    setshowLinks(!showLinks);
+    console.log(showLinks);
+  };
   return (
     <>
       <Head>
@@ -38,6 +45,7 @@ export default function Home() {
             </a>
           </Link>
         </div>
+        <button onClick={displayLinks}>Tap to show links</button>
       </main>
 
       {/* <footer className='footer'>
