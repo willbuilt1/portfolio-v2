@@ -106,9 +106,9 @@ nav {
     min-height: 33rem;
     writing-mode: vertical-lr;
     text-align: right;
-    rotate: (180deg);
+    // rotate: (180deg);
     transition: vars.$transition;
-    transform: scale(1);
+    transform: rotate(180deg);
     margin-right: -1rem;
 
     &:hover,
@@ -199,37 +199,46 @@ footer {
     bottom: 0;
     left: 0;
     background: linear-gradient(to bottom, #15151500, vars.$black 30%);
+    padding-left: 8rem;
 
     & a {
       writing-mode: initial;
-      rotate: (0deg);
+      transform: scale(1) rotate(0deg);
       font-size: 5vw;
       line-height: 6rem;
       min-height: initial;
-      margin-right: 2rem;
+      margin-right: 0rem;
 
       &:hover,
       &.active {
-        font-size: 6vw;
+        font-size: 5vw;
+        scale: (1);
+        margin-right: 0;
       }
     }
   }
 
   footer {
-    height: 7rem;
-    background: linear-gradient(to top, #15151500, vars.$black 40%);
+    height: 10rem;
+    // background: linear-gradient(to top, #15151500, vars.$black 40%);
+    background: transparent;
+    padding-left: vars.$md;
+    // padding-top: vars.$sm;
+
     position: fixed;
-    top: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    width: 7rem;
   }
 
   .homeLink {
     top: 0;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     padding: 0;
+    background: transparent;
   }
 }

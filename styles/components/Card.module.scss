@@ -17,16 +17,6 @@
     text-overflow: ellipsis;
   }
 
-  &__top {
-    position: relative;
-
-    &Text {
-      position: absolute;
-      bottom: 2rem;
-      left: 2rem;
-    }
-  }
-
   &__image {
     filter: blur(3px) grayscale(100%);
     transition: all 0.3s ease;

@@ -20,9 +20,9 @@ const Card = ({ portfolio }) => {
             objectFit="cover"
             className={styles.card__image}
           ></Image>
-          <h2 className={styles.card__topText}>{portfolio.siteName}</h2>
         </div>
         <div className={styles.card__bottom}>
+          <h2>{portfolio.siteName}</h2>
           <div>{documentToReactComponents(portfolio.shortDesc.json)}</div>
           <div className={styles.card__cats}>
             {portfolio.cat.map((category, index) => (

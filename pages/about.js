@@ -24,7 +24,7 @@ export default function About() {
 
         <p>
           I try to stay to stay up-to-date with the latest trends within the
-          industry through a comination of tech twitter and youtube. Currently
+          industry through a combination of tech twitter and youtube. Currently
           delving into the JAMstack and enjoy trying out wonderful tools and
           frameworks available. This site has been made using NextJS, Contentful
           which is a Headless CMS and some good ol' sass.
