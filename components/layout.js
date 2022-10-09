@@ -53,6 +53,7 @@ export default function Layout({ children, href }) {
           </svg>
         </Link>
       </footer>
+      <div className="wip">* Work in progress</div>
     </div>
   );
 }

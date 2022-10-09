@@ -44,11 +44,6 @@
     }
   }
 
-  &__initial {
-    // position: absolute;
-    // min-width: 20rem;
-  }
-
   &__location {
     opacity: 0;
     transition: left 0.3s ease;
@@ -75,4 +70,9 @@
 }
 .delay03 {
   animation-delay: 1.5s;
+}
+
+.wip {
+  position: absolute;
+  bottom: 2rem;
 }

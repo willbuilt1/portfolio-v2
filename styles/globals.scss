@@ -132,6 +132,20 @@ footer {
   width: 100%;
 }
 
+.wip {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .wip {
+    bottom: 2rem;
+    left: 2rem;
+    top: initial;
+  }
+}
+
 .homeLink {
   color: vars.$darkGrey;
   height: 10rem;
@@ -153,7 +167,6 @@ footer {
     width: 60%;
     margin: 8rem auto 4rem;
     padding-right: 5rem;
-    overflow: scroll;
     max-width: 1200px;
     // height: 80vh;
   }
@@ -171,7 +184,7 @@ footer {
     width: 100%;
     margin-left: 0;
     padding-right: 5rem;
-    overflow: scroll;
+
     // height: 80vh;
   }
 

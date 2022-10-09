@@ -47,6 +47,7 @@ export default function Home() {
         </div>
         <button onClick={displayLinks}>Tap to show links</button>
       </main>
+      <div className="wip">* Work in progress</div>
 
       {/* <footer className='footer'>
         <a
